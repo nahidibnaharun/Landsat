@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no" />
+    <title>Landsat Data Viewer</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script src="https://cdn.maptiler.com/maptiler-geocoding-control/v1.3.3/leaflet.umd.js"></script>
+    <link href="https://cdn.maptiler.com/maptiler-geocoding-control/v1.3.3/style.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="map"></div>
+    
+    <div class="controls">
+        <div class="search-container">
+            <input type="text" id="locationInput" placeholder="Enter a location name" />
+            <button id="searchButton">Search</button>
+        </div>
+        <div class="coordinates">
+            <input type="number" id="latInput" placeholder="Latitude" step="any" />
+            <input type="number" id="lonInput" placeholder="Longitude" step="any" />
+            <button id="setCoordsButton">Set Coordinates</button>
+        </div>
+        <div class="lead-time">
+            <input type="number" id="leadTimeInput" placeholder="Lead Time (minutes)" />
+        </div>
+        <div class="cloud-threshold">
+            <input type="number" id="cloudCoverInput" placeholder="Max Cloud Cover (%)" />
+        </div>
+        <button id="fetchDataButton">Fetch Landsat Data</button>
+    </div>
+
+    <div class="info">
+        <h2>TLE Data Download</h2>
+        <button id="downloadLandsat7">Download Landsat 7 TLE</button>
+        <button id="downloadLandsat8">Download Landsat 8 TLE</button>
+        <button id="downloadLandsat9">Download Landsat 9 TLE</button>
+    </div>
+
+    <div id="timers"></div>
+    
+    <p><a href="https://www.maptiler.com/copyright/" target="_blank" rel="noopener">&copy; MapTiler</a> <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener">&copy; OpenStreetMap contributors</a></p>
+    
+    <script src="script.js"></script>
+</body>
+</html>
