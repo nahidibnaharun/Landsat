@@ -1,0 +1,32 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+#map {
+    height: 80vh;
+    width: 100%; 
+}
+
+.controls {
+    display: flex;
+    justify-content: space-around;
+    padding: 10px;
+    background-color: rgba(255, 255, 255, 0.8);
+    position: absolute; 
+    z-index: 1000;
+    width: 100%; 
+}
+
+.controls input, .controls button {
+    margin: 5px;
+}
+
+.info {
+    margin: 10px;
+}
+
+#timers {
+    margin: 10px;
+}
